@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.detailteam.DetailTeamActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleEnabled="false"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="?attr/actionBarSize"
+                android:background="@color/colorPrimary">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_16dp"
+                    app:cardCornerRadius="@dimen/size_8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imageViewLogo"
+                            android:layout_width="110dp"
+                            android:layout_height="@dimen/size_0dp"
+                            android:layout_marginStart="@dimen/size_16dp"
+                            android:padding="@dimen/size_8dp"
+                            android:background="@color/colorPrimary"
+                            tools:src="@drawable/english_premier_league"
+                            app:layout_constraintBottom_toBottomOf="@+id/textViewValueCountry"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleID"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_id"
+                            android:textStyle="bold"
+                            android:layout_marginStart="@dimen/size_16dp"
+                            android:layout_marginTop="@dimen/size_16dp"
+                            app:layout_constraintStart_toEndOf="@+id/imageViewLogo"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/textViewValueID"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            android:layout_marginEnd="@dimen/size_16dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleID"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleID"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_name"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleID"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueID" />
+
+                        <TextView
+                            android:id="@+id/textViewValueName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleName"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleName"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleStadium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_stadium"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleID"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueName" />
+
+                        <TextView
+                            android:id="@+id/textViewValueStadium"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleStadium"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleStadium"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleFormedYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_formed_year"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleID"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueStadium" />
+
+                        <TextView
+                            android:id="@+id/textViewValueFormedYear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleFormedYear"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleFormedYear"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleLeague"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_league"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleID"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueFormedYear" />
+
+                        <TextView
+                            android:id="@+id/textViewValueLeague"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleLeague"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleLeague"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_gender"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleID"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueLeague" />
+
+                        <TextView
+                            android:id="@+id/textViewValueGender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleGender"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleGender"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleCountry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_country"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleID"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueGender" />
+
+                        <TextView
+                            android:id="@+id/textViewValueCountry"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleCountry"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleCountry"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleWebsite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_website"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/imageViewLogo"
+                            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+
+                        <TextView
+                            android:id="@+id/textViewValueWebsite"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            android:autoLink="web"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleWebsite"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleWebsite"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleFaceBook"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_facebook"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleWebsite"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueWebsite" />
+
+                        <TextView
+                            android:id="@+id/textViewValueFaceBook"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            android:autoLink="web"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleFaceBook"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleFaceBook"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleTwitter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_twitter"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleWebsite"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueFaceBook" />
+
+                        <TextView
+                            android:id="@+id/textViewValueTwitter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            android:autoLink="web"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleTwitter"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleTwitter"
+                            tools:text="Liga Ingris" />
+
+                        <TextView
+                            android:id="@+id/textViewTitleYoutube"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_8dp"
+                            android:text="@string/text_youtube"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/textViewTitleWebsite"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewValueTwitter"/>
+
+                        <TextView
+                            android:id="@+id/textViewValueYoutube"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/size_3dp"
+                            android:autoLink="web"
+                            android:layout_marginBottom="@dimen/size_16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/textViewValueID"
+                            app:layout_constraintStart_toEndOf="@+id/textViewTitleYoutube"
+                            app:layout_constraintTop_toTopOf="@+id/textViewTitleYoutube"
+                            tools:text="Liga Ingris" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_collapseMode="pin"
+                app:title="Details"
+                app:titleTextColor="@android:color/white"
+                app:navigationIcon="@drawable/ic_arrow_back"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@android:color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayoutMatch"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagerMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

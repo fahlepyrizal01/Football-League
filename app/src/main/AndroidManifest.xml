@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rizalfahlepi.footballleague">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".activity.detailteam.DetailTeamActivity"></activity>
+        <activity android:name=".activity.teamleague.TeamLeagueActivity" />
+        <activity android:name=".activity.tableteamleague.TableTeamLeagueActivity" />
+        <activity android:name=".activity.search.SearchMatchLeagueActivity" />
+        <activity android:name=".activity.detailmatchleague.DetailMatchLeagueActivity" />
+        <activity android:name=".activity.matchleague.MatchLeagueActivity" />
+        <activity android:name=".activity.detailleague.DetailLeagueActivity" />
+        <activity android:name=".activity.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
